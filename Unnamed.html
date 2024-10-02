@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CargoCare</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- First Page -->
+  <div class="container">
+    <h1>CargoCare</h1>
+    <div class="login-box">
+      <input type="text" placeholder="Username" id="username">
+      <input type="password" placeholder="Password" id="password">
+      <button onclick="login()">Login</button>
+      <a href="#" class="forgot-password">Forgotten Password?</a>
+      <a href="#" class="create-account">Create New Account</a>
+    </div>
+  </div>
+
+  <!-- Second Page After Login -->
+  <div id="booking-page" class="hidden">
+    <div class="logo-container">
+      <img src="truck-logo.png" alt="CargoCare Logo" class="logo">
+      <h2>CargoCare</h2>
+    </div>
+    <button class="booking-btn" onclick="showBookingOptions()">Booking</button>
+    <div id="booking-options" class="hidden">
+      <button onclick="showPaymentOptions('Mini Truck')">Mini Truck</button>
+      <button onclick="showPaymentOptions('Medium Truck')">Medium Truck</button>
+      <button onclick="showPaymentOptions('Large Truck')">Large Truck</button>
+    </div>
+
+    <div id="payment-options" class="hidden">
+      <button onclick="offlinePayment()">Offline Payment</button>
+      <button onclick="showOnlinePaymentOptions()">Online Payment</button>
+    </div>
+
+    <div id="online-payment-options" class="hidden">
+      <button onclick="successfulBooking()">GPay</button>
+      <button onclick="successfulBooking()">PhonePe</button>
+      <button onclick="successfulBooking()">UPI</button>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <a href="#">Contact Us</a>
+    <a href="#">Track Vehicle</a>
+    <a href="#">Help</a>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
